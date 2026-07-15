@@ -1,5 +1,7 @@
 class Car:
-    def __init__(self, comfort_class: int, clean_mark: int, brand: str) -> None:
+    def __init__(self, comfort_class: int,
+                 clean_mark: int,
+                 brand: str) -> None:
         self.comfort_class = comfort_class
         self.clean_mark = clean_mark
         self.brand = brand
@@ -45,9 +47,9 @@ class CarWashStation:
         :return: float
         """
         return round((car.comfort_class
-                * (self.clean_power - car.clean_mark)
-                * self.average_rating
-                / self.distance_from_city_center), 1)
+                      * (self.clean_power - car.clean_mark)
+                      * self.average_rating
+                      / self.distance_from_city_center), 1)
 
     def wash_single_car(self, car: Car) -> None:
         """
